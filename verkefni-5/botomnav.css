@@ -1,0 +1,76 @@
+
+:root{
+    --topnav-color: var(--pico-color-indigo);
+    --topnav-backgroung: rgba(117, 138, 207, 0.9);
+}
+@media screen and (prefers-color-scheme: dark){   
+    :root{
+        --topnav-color: var(--pico-color-indigo-400);
+        --topnav-backgroung: rgba(117, 138, 207, 0.9);
+    }
+}
+.bottomnav{
+    display: flex;
+    flex-flow: column;
+}
+
+#toggle {
+    display: none;
+}
+#toggle2 {
+    display: none;
+}
+.bottomnav h5{
+    margin: 1rem 1rem 0 1rem;
+}
+.bottomnav label{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0 .3rem;
+    font-size:  1.5rem;
+    border:  1px solid var(--pico-color-indigo-750);
+    border-radius: .2rem;
+    color: var(--pico-color-indigo-750);
+    background-color: var(--topnav-backgroung);
+    z-index: 10;
+}
+
+.bottommenu{
+    flex-flow: column;
+    margin: 1rem;
+    position: fixed;
+    width: 20rem;
+    bottom: 4rem;
+    right: -80rem;
+    background-color: var(--topnav-backgroung);
+    transition: all .3s ease;
+    z-index: 9;
+    border: 1px solid;
+    color: var(--topnav-color);
+    border-bottom: 1px solid var(--topnav-color);
+}
+
+.bottommenu a{
+    display: block;
+    width: 95%;
+    padding: 1.5rem 0 0rem 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    flex-flow: row;
+    margin: 0;
+}
+#toggle2:checked ~ .bottommenu  {
+    right: 1rem;
+    transition: all .3s ease;
+}
+.bottom-left{
+    position: absolute;
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+}

@@ -1,0 +1,56 @@
+:root, html{
+    scroll-behavior: smooth;
+}
+
+.footer {
+    border-top: 2px solid var(--pico-color-indigo-300);
+    text-align: center;
+    padding: 2rem 0;
+}
+nav, nav ul{
+    flex-flow: column;
+}
+@media (min-width: 37.5rem) {
+    nav, nav ul {
+        flex-flow: row;
+    }
+}
+
+.submit-form {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+details footer{
+    padding: 0.5rem;
+    font-style: italic;
+}
+.bg-50{
+    color: var(--footer-color)
+}
+.bg-50 td {
+    background-color: var(--pico-color-indigo-50);
+}
+
+.flokkar {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.flokkar section {
+    background-color: var(--footer-background);
+    border:  1px solid var(--indigo-color);
+    border-radius: .5rem;
+    padding-top: 1rem;
+}
+@media screen and(min-width:48rem) {
+    .flokkar{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+@media screen and(min-width: 60rem) {
+    .submit-form{
+        width: 30%;
+    }
+}
