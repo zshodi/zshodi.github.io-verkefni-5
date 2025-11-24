@@ -1,0 +1,106 @@
+
+:root{
+    --topnav-color: var(--pico-color-indigo);
+    --topnav-backgroung: rgba(175, 183, 209, 0.9);
+}
+@media screen and (prefers-color-scheme: dark){   
+    :root{
+        --topnav-color: var(--pico-color-indigo-400);
+        --topnav-backgroung: rgba(3, 57, 111, 0.8);
+    }
+}
+.topnav{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+#toggle {
+    display: none;
+}
+#toggle2 {
+    display: none;
+}
+.topnav h5{
+    margin: 1rem 1rem 0 1rem;
+}
+.topnav label{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0 .3rem;
+    font-size:  1.5rem;
+    border:  1px solid var(--topnav-color);
+    border-radius: .2rem;
+    color: var(--topnav-color);
+    background-color: var(--topnav-backgroung);
+    z-index: 10;
+}
+
+.topmenu{
+    flex-flow: column;
+    margin: 0;
+    position: fixed;
+    width: 90%;
+    top: 4rem;
+    right: -80rem;
+    background-color: var(--topnav-backgroung);
+    transition: all .3s ease;
+    z-index: 9;
+}
+
+.topmenu a{
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0 1rem 0;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid;
+    color: var(--topnav-color);
+    border-bottom: 1px solid var(--topnav-color);
+}
+
+.social {
+    display: flex;
+    flex-flow: row;
+    margin: 0;
+}
+#toggle:checked ~ .topmenu  {
+    right: 1rem;
+    transition: all .3s ease;
+}
+
+@media screen and (min-width:60rem){
+    .topnav label {
+        display: none;
+    }
+    .topnav{
+        position: relative;
+    }
+    .topmenu{
+        display: flex;
+        flex-flow: row;
+        top: 0;
+        top: 0;
+        right: 0;
+        transition: none;
+        border: 0;
+        background-color: transparent;
+    }
+    .social {
+        margin-right: 1rem;
+    }
+    .topmenu a{
+        border: 0;
+        padding: 1rem 1rem;
+    }
+    .social a{
+        padding: 1rem;
+    }
+}
+.bottom-left{
+    position: absolute;
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+}
