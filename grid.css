@@ -1,0 +1,77 @@
+html{
+    scroll-behavior: smooth;
+}
+.col-2, .col-4 .col-41{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1rem;
+}
+.col-41{
+    justify-content: center;
+    text-align: center;
+}
+nav, nav ul{
+    flex-flow: column;
+}
+.send-form {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+.admin-aside {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+.admin-aside h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--color-primary);
+}
+@media (min-width: 48rem) {
+    .col-2{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1rem;
+    }
+    .col-4{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+}
+@media screen and (min-width: 60rem) {
+    .col-2 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+}
+@media screen and (min-width: 80rem) {
+    .col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 64rem) {
+    #pc-only {
+        display: none;
+    }
+}
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+      }
+      100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+      }
+    }
+
+.moving-text {
+  display: inline-block;  /* prevents element from stretching the page */
+  white-space: nowrap;
+  overflow: hidden;       /* hides the extra width so no scrollbar appears */
+  animation: scrollText 15s linear infinite;
+  width: 100%;
+}
+.moving-wrapper {
+  width: 102%;
+  overflow: hidden; /* THIS prevents the page from getting wider */
+}

@@ -1,0 +1,23 @@
+:root
+:host {
+    --pico-color-indigo-950: #110b31;
+    --pico-color-indigo-900: #181546;
+    --pico-color-indigo-850: #1f1e5e;
+    --pico-color-indigo-800: #272678;
+    --pico-color-indigo-750: #2f2f92;
+    --pico-color-indigo-700: #3838ab;
+    --pico-color-indigo-650: #4040bf;
+    --pico-color-indigo-600: #524ed2;
+    --pico-color-indigo-550: #655cd6;
+    --pico-color-indigo-500: #7569da;
+    --pico-color-indigo-450: #8577dd;
+    --pico-color-indigo-400: #9486e1;
+    --pico-color-indigo-350: #a294e5;
+    --pico-color-indigo-300: #b0a3e8;
+    --pico-color-indigo-250: #bdb2ec;
+    --pico-color-indigo-200: #cac1ee;
+    --pico-color-indigo-150: #d8d0f1;
+    --pico-color-indigo-100: #e5e0f4;
+    --pico-color-indigo-50: #f2f0f9;
+    --pico-color-indigo: #524ed2;
+}
